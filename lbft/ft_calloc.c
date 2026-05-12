@@ -6,7 +6,7 @@ void	*ft_calloc(size_t n, size_t size)
 	size_t	total_size;
 
 	if (n == 0 || size == 0)
-		return (NULL);
+		ptr = malloc(0);
 	total_size = n * size;
 	ptr = malloc(total_size);
 	if(ptr != NULL)
@@ -18,8 +18,8 @@ void	*ft_calloc(size_t n, size_t size)
 /*
 int main()
 {
-	unsigned int player = 10;
-	unsigned int size = 4;
+	unsigned int player = 0;
+	unsigned int size = 0;
 	
 	int *score = ft_calloc(player, size);
 	for (unsigned int i = 0; i < player; i++)

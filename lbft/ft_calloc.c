@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/13 12:06:36 by jomatic           #+#    #+#             */
+/*   Updated: 2026/05/13 12:07:02 by jomatic          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_calloc(size_t n, size_t size)
@@ -9,10 +21,10 @@ void	*ft_calloc(size_t n, size_t size)
 		ptr = malloc(0);
 	total_size = n * size;
 	ptr = malloc(total_size);
-	if(ptr != NULL)
+	if (ptr != NULL)
 	{
 		ft_memset(ptr, 0, total_size);
-	}	
+	}
 	return (ptr);
 }
 /*

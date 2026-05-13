@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/13 11:41:12 by jomatic           #+#    #+#             */
+/*   Updated: 2026/05/13 11:41:16 by jomatic          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
 {
-	size_t			i;
+	size_t				i;
 	unsigned char		*d;
 	const unsigned char	*s;
 

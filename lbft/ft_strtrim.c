@@ -6,7 +6,7 @@
 /*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 13:09:32 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/14 12:57:21 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/14 13:46:47 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,23 +62,19 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		j;
 	int		start;
 	int		end;
-	char	*string;
 
 	i = 0;
 	j = 0;
 	start = 0;
 	end = 0;
-	string = malloc(ft_strlen(s1) * sizeof(char) + 1);
-	if (!string)
-		return (NULL);
 	start = ft_find_start(s1, set);
 	end = ft_find_end(s1, set);
-	return (ft_substr(s1, start, ft_strlen(s1) - (start + end)));
+	return (ft_substr(s1, start, ft_strlen(s1) - (start + end - 1)));
 }
 /*
 int main()
 {
-	char *s1 = "";
+	char *s1 = "somting will delete somth";
 	char *set = "omething";
 
 	printf("%s", ft_strtrim(s1, set));

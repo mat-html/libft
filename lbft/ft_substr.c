@@ -6,7 +6,7 @@
 /*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 11:31:24 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/13 12:51:45 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/14 13:44:18 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		start++;
 		i++;
 	}
-	ptr[i] = ’\0';
+	ptr[i] = '\0';
 	return (ptr);
 }
 /*

@@ -38,6 +38,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		}
 		i++;
 	}
+	ptr[i] = ’\0';
 	return (ptr);
 }
 /*

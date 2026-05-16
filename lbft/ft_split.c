@@ -5,106 +5,118 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/14 12:58:22 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/14 16:19:56 by jomatic          ###   ########.fr       */
+/*   Created: 2026/05/16 10:27:09 by jomatic           #+#    #+#             */
+/*   Updated: 2026/05/16 12:36:00 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//make array of strings
-//ft_split return array of strings(double pointer)
-//function that free everything
-//count how many strings we will have
-//NULL terminate array; NULL terminate strings
-int	ft_count_char(char const *s, char c)
+static int	count_words(const char *s, char c)
 {
-	int	i;
-	int num_of_char;
-
-	i = 0;
-	num_of_char = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == c && i != 0)
-		{	
-			num_of_char++;
-		}
-		else if (i == 0)
-		{
-			num_of_char = 1;
-		}
-		i++;
-	}
-	return (num_of_char);
-}
-
-char *ft_make_string(char const *s,  char c, int start)
-{
-	char	*str;
-	int		len;
-	int		i;
-	
-	i = 0;
-	len = 0;
-	if (start == 0)
-	{
-		while (s[len] != c)
-		{
-			len++;
-		}
-		str = malloc(len * sizeof(char));
-	}
-	while (start != 0)
-	{
-		if (s[i] == c || i == 0)
-			start--;
-		i++;
-	}
-	while (s[i] != '\0' && s[i] != c)
-		len++;
-	str = malloc(len * sizeof(char));
-	while (s[i] != '\0' && s[i] != c)
-	{
-		str[start] = s[i];
-		start++;
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
-}
-
-char	**ft_split(char const *s, char c)
-{
-	char	**arr;
-	int		i;
 	int		count;
+	int		inside_word;
+	size_t	j;
 
-	i = 0;
-	count = ft_count_char(s, c);
-	arr = malloc((count + 1) * sizeof(char *));
-	if(!arr)
-		return (NULL);
-	while (i < count)
+	j = 0;
+	count = 0;
+	while (s[j])
 	{
-		*arr++ = ft_make_string(s, c, i);
-		i++;
+		inside_word = 0;
+		while (s[j] == c && s[j])
+			j++;
+		while (s[j] != c && s[j])
+		{
+			if (inside_word == 0)
+			{
+				count++;
+				inside_word = 1;
+			}
+			j++;
+		}
 	}
-	return (arr);
+	return (count);
 }
 
-int main()
+static void	ft_free(char **arr, int i)
 {
-	char *s = "some some some";
-	char c = 's';
-	char **arr;
-	int i = 0;
+	int	j;
 
-	arr = ft_split(s, c);
-	while (arr)
+	j = 0;
+	while (j < i)
+		free(arr[j++]);
+	free(arr);
+}
+
+static int	ft_malloc(char **arr, int i, size_t buffer)
+{
+	int	j;
+
+	j = 0;
+	arr[i] = malloc(buffer * sizeof(char));
+	if (arr[i] == NULL)
 	{
-		printf("%s", arr[i]);
-		i++;
+		ft_free(arr, i);
+		return (1);
 	}
 	return (0);
 }
+
+static char	**fill_word(char **arr, const char *s, char c)
+{
+	size_t	len;
+	int		i;
+	size_t	j;
+
+	i = 0;
+	j = 0;
+	while (s[j])
+	{
+		len = 0;
+		while (s[j] == c && s[j])
+			j++;
+		while (s[j] != c && s[j])
+		{
+			len++;
+			j++;
+		}
+		if (ft_malloc(arr, i, len + 1))
+			return (NULL);
+		ft_strlcpy(arr[i], s + (j - len), len + 1);
+		i++;
+	}
+	arr[i] = NULL;
+	return (arr);
+}
+
+char	**ft_split(const char *s, char c)
+{
+	int		count;
+	char	**arr;
+
+	count = count_words(s, c);
+	arr = ft_calloc(count + 1, sizeof(char *));
+	if (!arr)
+		return (NULL);
+	if (!fill_word(arr, s, c))
+		return (NULL);
+	return (arr);
+}
+/*
+int main()
+{
+	char s[] = "some thing will be done i hope";
+	char c = 'e';
+	char **arr;
+	int	i;
+
+	i = 0;
+	arr = ft_split(s, c);
+
+	while (arr[i])
+	{
+		printf("%s\n", arr[i]);
+		i++;
+	}
+	return (0);
+}*/

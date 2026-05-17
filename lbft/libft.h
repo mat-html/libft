@@ -6,13 +6,14 @@
 /*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 14:47:36 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/13 12:08:32 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/17 14:41:50 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <unistd.h>
 # include <stdlib.h>
 # include <stddef.h>
 # include <stdio.h> //to be deleted after testing

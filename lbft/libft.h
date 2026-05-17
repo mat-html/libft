@@ -6,7 +6,7 @@
 /*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 14:47:36 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/17 14:41:50 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/17 15:21:59 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 # include <stdlib.h>
 # include <stddef.h>
 # include <stdio.h> //to be deleted after testing
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 int		ft_isalpha(int i);
 int		ft_isdigit(int i);
 int		ft_isalnum(int i);

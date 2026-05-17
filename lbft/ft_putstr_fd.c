@@ -6,7 +6,7 @@
 /*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/16 14:16:43 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/17 14:51:29 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/17 15:10:41 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void	ft_putstr_fd(char *s, int fd)
 		write(fd, &s[i], 1);
 		i++;
 	}
-	write(fd, "\n", 1);
 }
 /*
 int main()

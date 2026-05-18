@@ -6,7 +6,7 @@
 /*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 18:22:21 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/17 18:32:36 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/18 10:27:28 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 t_list *ft_lstlast(t_list *lst)
 {
-	t_list *ptr;
-
-	if (!lst->next)
-		return (lst);
-	ptr = lst;
-	while(ptr->next)
+	t_list *tmp;
+	
+	if (!lst)
+		return(NULL);
+	tmp = lst;
+	while (tmp->next)
 	{
-		ptr = ptr->next;
+		tmp = tmp->next;
 	}
-	return (ptr);
+	return (tmp);
 }
 /*
 int main()

@@ -6,21 +6,25 @@
 /*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 18:45:49 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/17 19:16:31 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/18 12:00:17 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
 static void	del_node(void *content)
 {
 	printf("2before free delnode\n");
-	content = NULL;
+	if(content != NULL)
+		free(content);
 	printf("affter free del_node#\n");
 }
-
+*/
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
+	if (!lst || !del)
+		return;
 	del(lst->content);
 	free(lst);
 }
@@ -34,9 +38,9 @@ int main()
 	t_list *new;
 	t_list *second;
 
-	head = ft_lstnew(str);
-	second = ft_lstnew(str3);
-	new = ft_lstnew(str2);
+	head = ft_lstnew(ft_strdup(str));
+	second = ft_lstnew(ft_strdup(str3));
+	new = ft_lstnew(ft_strdup(str2));
 	head->next = second;
 
 	printf("head: %s\n", (char *)head->content);

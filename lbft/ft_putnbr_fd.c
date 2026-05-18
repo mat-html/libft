@@ -19,8 +19,9 @@ void	ft_putnbr_fd(int n, int fd)
 	s = ft_itoa(n);
 	ft_putstr_fd(s, fd);
 }
-
+/*
 int main()
 {
 	ft_putnbr_fd(-2147483648, 1);
 }
+*/

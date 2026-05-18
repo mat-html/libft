@@ -31,8 +31,11 @@ void	ft_lstiteri(t_list *lst, void (*f)(void *))
 {
 	t_list	*tmp;
 
+	if (!lst || !f)
+		return;
+
 	tmp = lst;
-	while (tmp != NULL)
+	while (tmp)
 	{
 		f(tmp->content);
 		tmp = tmp->next;
@@ -61,7 +64,7 @@ int main()
 	test2 = ft_lstnew(ft_strdup("test2"));
 	test3 = ft_lstnew(ft_strdup("test3"));
 	test4 = ft_lstnew(ft_strdup("test4"));
-	
+
 	test->next = test1;
 	test1->next = test2;
 	test2->next = test3;

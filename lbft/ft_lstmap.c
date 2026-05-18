@@ -39,7 +39,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	{
 		temp = ft_lstnew(f(lst->content));
 		if (!temp)
-		{	
+		{
 			ft_lstclear(&new_list, del);
 			return (NULL);
 		}
@@ -48,7 +48,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new_list);
 }
-
+/*
 int main()
 {
 	t_list *test;
@@ -69,6 +69,11 @@ int main()
 	test3->next = test4;
 	test4->next = NULL;
 
-	ft_lstmap(test, (char *)ft_strdup, del);
-	print_lst(test);
+	{
+		t_list *mapped;
+
+		mapped = ft_lstmap(test, (void *(*)(void *))ft_strdup, del);
+		print_lst(mapped);
+	}
 }
+*/

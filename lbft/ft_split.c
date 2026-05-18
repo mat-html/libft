@@ -50,9 +50,6 @@ static void	ft_free(char **arr, int i)
 
 static int	ft_malloc(char **arr, int i, size_t buffer)
 {
-	int	j;
-
-	j = 0;
 	arr[i] = malloc(buffer * sizeof(char));
 	if (arr[i] == NULL)
 	{

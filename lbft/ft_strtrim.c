@@ -58,13 +58,9 @@ int	ft_find_end(const char *s1, const char *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
-	int		j;
 	int		start;
 	int		end;
 
-	i = 0;
-	j = 0;
 	start = 0;
 	end = 0;
 	start = ft_find_start(s1, set);

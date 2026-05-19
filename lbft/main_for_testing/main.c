@@ -6,11 +6,11 @@
 /*   By: copilot <copilot@student.example.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 00:00:00 by copilot           #+#    #+#             */
-/*   Updated: 2026/05/18 00:00:00 by copilot          ###   ########.fr       */
+/*   Updated: 2026/05/19 15:09:27 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 #include <stdio.h>
 
 static void	test_putchar_fd(void)

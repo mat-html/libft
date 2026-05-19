@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	ft_isspace(const char *ptr)
+static int	ft_isspace(const char *ptr)
 {
 	int	i;
 
@@ -31,13 +31,13 @@ int	ft_atoi(const char *ptr)
 	int	sign;
 	int	result;
 
-	sign = 0;
+	sign = 1;
 	i = ft_isspace(ptr);
 	result = 0;
-	while (ptr[i] == '+' || ptr[i] == '-')
+	if (ptr[i] == '+' || ptr[i] == '-')
 	{
 		if (ptr[i] == '-')
-			sign++;
+			sign = -sign;
 		i++;
 	}
 	while (ptr[i] >= '0' && ptr[i] <= '9')
@@ -45,12 +45,7 @@ int	ft_atoi(const char *ptr)
 		result = result * 10 + (ptr[i] - '0');
 		i++;
 	}
-	if (sign % 2 == 1)
-	{
-		sign = -1;
-		return (result * sign);
-	}
-	return (result);
+	return (result * sign);
 }
 /*
 int main(){

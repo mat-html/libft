@@ -23,6 +23,8 @@ make
 
 This will produce `libft.a` in the same folder.
 
+In order to use libft library, it is needed to include libft.h headerfile in the file that uses it.
+
 Manual compilation with strict flags (`cc -Wall -Wextra -Werror`):
 
 ```bash

@@ -6,7 +6,7 @@
 /*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 09:48:34 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/18 10:53:32 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/19 14:57:10 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*temp;
 
 	if (!lst || !del)
-		return;
+		return ;
 	while (*lst)
 	{
 		temp = (*lst)->next;

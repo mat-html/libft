@@ -6,18 +6,18 @@
 /*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 18:22:21 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/18 10:27:28 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/19 14:58:43 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-	t_list *tmp;
-	
+	t_list	*tmp;
+
 	if (!lst)
-		return(NULL);
+		return (NULL);
 	tmp = lst;
 	while (tmp->next)
 	{

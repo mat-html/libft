@@ -6,7 +6,7 @@
 /*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 17:13:04 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/17 17:52:07 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/19 14:56:52 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!new)
-		return;
+		return ;
 	if (lst)
 	{
 		new->next = *lst;

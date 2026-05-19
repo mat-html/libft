@@ -6,7 +6,7 @@
 /*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 10:54:04 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/18 11:58:54 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/19 14:57:46 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,7 @@ void	ft_lstiteri(t_list *lst, void (*f)(void *))
 	t_list	*tmp;
 
 	if (!lst || !f)
-		return;
-
+		return ;
 	tmp = lst;
 	while (tmp)
 	{

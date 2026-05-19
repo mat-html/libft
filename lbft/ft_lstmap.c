@@ -6,12 +6,12 @@
 /*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 12:02:11 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/18 12:38:06 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/19 14:59:22 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/*
 void	print_lst(t_list *lst)
 {
 	while (lst != NULL)
@@ -26,11 +26,11 @@ void del(void *content)
 	if (content)
 		free(content);
 }
-
+*/
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *temp;
-	t_list *new_list;
+	t_list	*temp;
+	t_list	*new_list;
 
 	if (!lst || !del || !f)
 		return (NULL);

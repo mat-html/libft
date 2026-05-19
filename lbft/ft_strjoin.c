@@ -6,7 +6,7 @@
 /*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 12:52:29 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/14 13:49:49 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/19 15:03:47 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		if (i < ft_strlen(s1))
 		{
 			ptr[i] = s1[i];
+			break ;
 		}
-		else
-		{
-			ptr[i] = s2[j];
-			j++;
-		}
+		ptr[i] = s2[j];
+		j++;
 		i++;
 	}
 	ptr[i] = '\0';

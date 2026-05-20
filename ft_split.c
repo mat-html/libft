@@ -50,7 +50,7 @@ static void	ft_free(char **arr, int i)
 
 static int	ft_malloc(char **arr, int i, size_t buffer)
 {
-	arr[i] = malloc(buffer * sizeof(char));
+	arr[i] = ft_calloc(buffer, sizeof(char));
 	if (arr[i] == NULL)
 	{
 		ft_free(arr, i);
@@ -62,7 +62,7 @@ static int	ft_malloc(char **arr, int i, size_t buffer)
 static char	**fill_word(char **arr, const char *s, char c)
 {
 	size_t	len;
-	int		i;
+	size_t	i;
 	size_t	j;
 
 	i = 0;
@@ -77,10 +77,13 @@ static char	**fill_word(char **arr, const char *s, char c)
 			len++;
 			j++;
 		}
-		if (ft_malloc(arr, i, len + 1))
-			return (NULL);
-		ft_strlcpy(arr[i], s + (j - len), len + 1);
-		i++;
+		if (len > 0)
+		{
+			if (ft_malloc(arr, i, len + 1))
+				return (NULL);
+			ft_strlcpy(arr[i], s + (j - len), len + 1);
+			i++;
+		}
 	}
 	arr[i] = NULL;
 	return (arr);
@@ -100,10 +103,11 @@ char	**ft_split(const char *s, char c)
 	return (arr);
 }
 /*
+#include <stdio.h>
 int main()
 {
-	char s[] = "some thing will be done i hope";
-	char c = 'e';
+	char s[] = "  tripouille  42  ";
+	char c = ' ';
 	char **arr;
 	int	i;
 

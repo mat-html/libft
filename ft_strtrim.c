@@ -27,7 +27,7 @@ static int	ft_find_start(const char *s1, const char *set)
 		{
 			start++;
 			i++;
-			j = 0;
+			j = -1;
 		}
 		j++;
 	}
@@ -49,7 +49,7 @@ static int	ft_find_end(const char *s1, const char *set)
 		{
 			end++;
 			i--;
-			j = 0;
+			j = -1;
 		}
 		j++;
 	}
@@ -68,10 +68,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (ft_substr(s1, start, ft_strlen(s1) - (start + end - 1)));
 }
 /*
+#include <stdio.h>
 int main()
 {
-	char *s1 = "somting will delete somth";
-	char *set = "omething";
+	char *s1 = "//-++//somting will delete somth//+-";
+	char *set = "-+/";
 
 	printf("%s", ft_strtrim(s1, set));
 					return (0);

@@ -20,7 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	j = 0;
-	ptr = ft_calloc((ft_strlen(s1) + ft_strlen(s2)), sizeof(char));
+	ptr = ft_calloc((ft_strlen(s1) + ft_strlen(s2) + 1), sizeof(char));
 	while (i < (ft_strlen(s1)+ft_strlen(s2)))
 	{
 		while (i < (ft_strlen(s1) + ft_strlen(s2)))

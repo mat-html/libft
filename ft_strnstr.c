@@ -18,6 +18,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	l;
 
 	i = 0;
+	if(!*little)
+		return ((char *)big);
 	while (big[i] != '\0' && i < len)
 	{
 		l = 0;
@@ -33,11 +35,15 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return (NULL);
 }
 /*
+#include <string.h>
+#include <stdio.h>
 int main()
 {
-	const char big[] = "something will find THIS word";
-	const char little[] = "diff";
-	size_t i = 40;
+	char * empty = (char*)"";
+	//const char big[] = "something will find THIS word";
+	//const char little[] = "diff";
+	ssize_t i = -1;
 
-	printf("%s", ft_strnstr(big, little, i));
+	printf("%s", ft_strnstr(empty, "", i));
+	//printf("%d", strnstr(empty, "", i));	
 }*/

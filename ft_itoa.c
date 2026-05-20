@@ -46,7 +46,7 @@ char	*ft_itoa(int n)
 		nb *= (-1);
 	}
 	len = count_char(n);
-	result = malloc((len + 1) * sizeof(char));
+	result = ft_calloc((len + 1), sizeof(char));
 	if (!result)
 		return (NULL);
 	result[len] = '\0';

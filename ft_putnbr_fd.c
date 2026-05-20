@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	ft_write_str(char *str, int fd)
+static int	ft_write_str(char *str, int fd)
 {
 	int	i;
 
@@ -25,7 +25,7 @@ int	ft_write_str(char *str, int fd)
 	return (0);
 }
 
-void	ft_swap(char *str, int fd)
+static void	ft_swap(char *str, int fd)
 {
 	int		k;
 	int		i;
@@ -46,7 +46,7 @@ void	ft_swap(char *str, int fd)
 	ft_write_str(str, fd);
 }
 
-int	int_min_max(int nb, int fd)
+static int	int_min_max(int nb, int fd)
 {
 	if (nb == -2147483648)
 	{
@@ -61,7 +61,7 @@ int	int_min_max(int nb, int fd)
 	return (0);
 }
 
-void	ft_check_nb(int nb, int fd)
+static void	ft_check_nb(int nb, int fd)
 {
 	int		i;
 	char	str[15];

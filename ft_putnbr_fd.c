@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-static int	ft_write_str(char *str, int fd)
+static void	ft_write_str(char *str, int fd)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -22,13 +22,12 @@ static int	ft_write_str(char *str, int fd)
 		write(fd, &str[i], 1);
 		i++;
 	}
-	return (0);
 }
 
 static void	ft_swap(char *str, int fd)
 {
-	int		k;
-	int		i;
+	size_t		k;
+	size_t		i;
 	char	temp;
 
 	i = 0;
@@ -63,7 +62,7 @@ static int	int_min_max(int nb, int fd)
 
 static void	ft_check_nb(int nb, int fd)
 {
-	int		i;
+	size_t		i;
 	char	str[15];
 
 	i = 0;

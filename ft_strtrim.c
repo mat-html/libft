@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-static int	ft_find_start(const char *s1, const char *set)
+static size_t	ft_find_start(const char *s1, const char *set)
 {
-	unsigned int	i;
-	int				j;
-	int				start;
+	size_t	i;
+	size_t	j;
+	size_t	start;
 
 	i = 0;
 	j = 0;
@@ -34,11 +34,11 @@ static int	ft_find_start(const char *s1, const char *set)
 	return (start);
 }
 
-static int	ft_find_end(const char *s1, const char *set)
+static size_t	ft_find_end(const char *s1, const char *set)
 {
-	unsigned int	i;
-	unsigned int	j;
-	int				end;
+	size_t	i;
+	size_t	j;
+	size_t	end;
 
 	i = ft_strlen(s1);
 	end = 0;
@@ -58,8 +58,8 @@ static int	ft_find_end(const char *s1, const char *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		start;
-	int		end;
+	size_t	start;
+	size_t	end;
 
 	start = 0;
 	end = 0;

@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-static int	count_words(const char *s, char c)
+static size_t	count_words(const char *s, char c)
 {
-	int		count;
-	int		inside_word;
+	size_t		count;
+	size_t		inside_word;
 	size_t	j;
 
 	j = 0;
@@ -38,9 +38,9 @@ static int	count_words(const char *s, char c)
 	return (count);
 }
 
-static void	ft_free(char **arr, int i)
+static void	ft_free(char **arr, size_t i)
 {
-	int	j;
+	size_t	j;
 
 	j = 0;
 	while (j < i)
@@ -48,7 +48,7 @@ static void	ft_free(char **arr, int i)
 	free(arr);
 }
 
-static int	ft_malloc(char **arr, int i, size_t buffer)
+static int	ft_malloc(char **arr, size_t i, size_t buffer)
 {
 	arr[i] = ft_calloc(buffer, sizeof(char));
 	if (arr[i] == NULL)
@@ -90,7 +90,7 @@ static char	**fill_word(char **arr, const char *s, char c)
 
 char	**ft_split(const char *s, char c)
 {
-	int		count;
+	size_t		count;
 	char	**arr;
 
 	count = count_words(s, c);

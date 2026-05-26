@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-static int	count_char(int n)
+static size_t	count_char(int n)
 {
-	int		count;
+	size_t		count;
 	long	nb;
 
 	nb = n;
@@ -37,7 +37,7 @@ static int	count_char(int n)
 char	*ft_itoa(int n)
 {
 	char	*result;
-	int		len;
+	size_t		len;
 	long	nb;
 
 	nb = n;
@@ -49,7 +49,6 @@ char	*ft_itoa(int n)
 	result = ft_calloc((len + 1), sizeof(char));
 	if (!result)
 		return (NULL);
-	//result[len] = '\0';
 	while (len > 0)
 	{
 		result[--len] = nb % 10 + '0';

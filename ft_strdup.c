@@ -6,7 +6,7 @@
 /*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 12:07:14 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/13 12:07:37 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/26 16:08:24 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strdup(const char *s)
 {
 	char	*str;
-	size_t		i;
+	size_t	i;
 
 	i = 0;
 	str = malloc(ft_strlen(s) + 1);

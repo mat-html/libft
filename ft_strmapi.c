@@ -6,7 +6,7 @@
 /*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/16 14:15:03 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/17 14:13:38 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/26 16:09:31 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char			*str;
+	char	*str;
 	size_t	len;
 	size_t	i;
 

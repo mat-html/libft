@@ -6,12 +6,11 @@
 /*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 18:45:49 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/19 14:57:24 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/26 16:06:58 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {

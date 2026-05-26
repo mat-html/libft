@@ -6,7 +6,7 @@
 /*   By: jomatic <jomatic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/16 13:05:18 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/26 14:31:16 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/26 16:06:30 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static size_t	count_char(int n)
 {
-	size_t		count;
+	size_t	count;
 	long	nb;
 
 	nb = n;
@@ -37,7 +37,7 @@ static size_t	count_char(int n)
 char	*ft_itoa(int n)
 {
 	char	*result;
-	size_t		len;
+	size_t	len;
 	long	nb;
 
 	nb = n;

@@ -6,7 +6,7 @@
 /*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/16 10:27:09 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/26 14:10:47 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/26 16:08:05 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static size_t	count_words(const char *s, char c)
 {
-	size_t		count;
-	size_t		inside_word;
+	size_t	count;
+	size_t	inside_word;
 	size_t	j;
 
 	j = 0;
@@ -90,7 +90,7 @@ static char	**fill_word(char **arr, const char *s, char c)
 
 char	**ft_split(const char *s, char c)
 {
-	size_t		count;
+	size_t	count;
 	char	**arr;
 
 	count = count_words(s, c);

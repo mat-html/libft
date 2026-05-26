@@ -6,7 +6,7 @@
 /*   By: jomatic <jomatic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/16 14:17:10 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/26 15:02:23 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/26 16:07:44 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ static void	ft_write_str(char *str, int fd)
 
 static void	ft_swap(char *str, int fd)
 {
-	size_t		k;
-	size_t		i;
+	size_t	k;
+	size_t	i;
 	char	temp;
 
 	i = 0;
@@ -62,7 +62,7 @@ static int	int_min_max(int nb, int fd)
 
 static void	ft_check_nb(int nb, int fd)
 {
-	size_t		i;
+	size_t	i;
 	char	str[15];
 
 	i = 0;

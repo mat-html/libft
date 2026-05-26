@@ -6,7 +6,7 @@
 /*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 12:52:29 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/19 15:23:31 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/26 16:09:06 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	i;
-	char			*ptr;
+	char	*ptr;
 	size_t	j;
 
 	i = 0;

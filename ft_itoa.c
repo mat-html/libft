@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
+/*   By: jomatic <jomatic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/16 13:05:18 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/16 14:12:46 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/26 14:31:16 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char	*ft_itoa(int n)
 	result = ft_calloc((len + 1), sizeof(char));
 	if (!result)
 		return (NULL);
-	result[len] = '\0';
+	//result[len] = '\0';
 	while (len > 0)
 	{
 		result[--len] = nb % 10 + '0';

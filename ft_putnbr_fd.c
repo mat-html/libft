@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
+/*   By: jomatic <jomatic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/16 14:17:10 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/17 15:19:06 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/26 15:02:23 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ static void	ft_check_nb(int nb, int fd)
 	char	str[15];
 
 	i = 0;
-	if (nb < 0 && nb != -2147483648)
+	if (nb < 0)
 	{
 		nb *= (-1);
 		write(fd, "-", 1);

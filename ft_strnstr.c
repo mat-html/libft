@@ -6,7 +6,7 @@
 /*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 12:05:48 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/13 12:05:49 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/26 14:01:49 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	l;
 
 	i = 0;
-	if(!*little)
+	if (!*little)
 		return ((char *)big);
 	while (big[i] != '\0' && i < len)
 	{

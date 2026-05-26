@@ -12,6 +12,14 @@
 
 #include "libft.h"
 
+
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
+{
+	if (!lst || !del)
+		return ;
+	del(lst->content);
+	free(lst);
+}
 /*
 static void	del_node(void *content)
 {
@@ -21,13 +29,6 @@ static void	del_node(void *content)
 	printf("affter free del_node#\n");
 }
 */
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
-{
-	if (!lst || !del)
-		return ;
-	del(lst->content);
-	free(lst);
-}
 /*
 int main()
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
+/*   By: jomatic <jomatic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 11:31:24 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/14 13:44:18 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/26 15:07:26 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,8 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*ptr;
-	unsigned int	i;
-	size_t	real_length;
-	
-	i = 0;
+	size_t			real_length;
+
 	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
 	if (ft_strlen(s) - start < len)

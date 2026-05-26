@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
+/*   By: jomatic <jomatic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 12:06:10 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/13 12:06:11 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/26 14:26:29 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_atoi(const char *ptr)
 {
 	int	i;
 	int	sign;
-	int	result;
+	long	result;
 
 	sign = 1;
 	i = ft_isspace(ptr);
@@ -45,7 +45,7 @@ int	ft_atoi(const char *ptr)
 		result = result * 10 + (ptr[i] - '0');
 		i++;
 	}
-	return (result * sign);
+	return ((int)result * sign);
 }
 /*
 int main(){

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
+/*   By: jomatic <jomatic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 11:41:54 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/13 12:23:13 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/26 14:02:26 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*d;
 	unsigned char	*s;
 
-//	if (!dest && !src)
-//		return (NULL);
 	i = 0;
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
@@ -27,7 +25,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	{
 		while (n-- > 0)
 		{
-//			printf( "copying dest[%d] = %c to src[%d] = %c\n", n, d[n],n ,s[n]); 
 			d[n] = s[n];
 		}
 	}

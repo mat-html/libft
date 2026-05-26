@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
+/*   By: jomatic <jomatic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/17 17:53:02 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/17 18:12:42 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/26 15:08:41 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,19 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	t_list	*ptr;
 	int		count;
 
 	count = 0;
-	if (!lst)
+	/*if (!lst)
 		return (count);
 	count = 1;
 	if (!lst->next)
-		return (count);
-	ptr = lst->next;
-	while (ptr != NULL)
+		return (count);*/
+	//ptr = lst->next;
+	while (lst != NULL)
 	{
 		count++;
-		ptr = ptr->next;
+		lst = lst->next;
 	}
 	return (count);
 }

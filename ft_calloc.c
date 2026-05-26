@@ -6,7 +6,7 @@
 /*   By: jomatic <jomatic@student.42vienna.com      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 12:06:36 by jomatic           #+#    #+#             */
-/*   Updated: 2026/05/13 12:07:02 by jomatic          ###   ########.fr       */
+/*   Updated: 2026/05/26 14:14:02 by jomatic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_calloc(size_t n, size_t size)
 	{
 		n = 1;
 		size = 1;
-	}		
+	}
 	total_size = n * size;
 	if (size != 0 && (total_size / size) != n)
 		return (NULL);

@@ -36,5 +36,5 @@ int main()
 	int c = 0;
 
 	printf("%p\n", ft_memchr(s, c, 20));
-//	printf("%p", memchr(s, c, 11));
+	printf("%p", memchr(s, c, 11));
 }*/

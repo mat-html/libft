@@ -27,8 +27,7 @@ static void	del_node(void *content)
 		free(content);
 	printf("affter free del_node#\n");
 }
-*/
-/*
+
 int main()
 {
 	char *str = "something first";

@@ -11,13 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-static void	del(void *content)
-{
-	if(content != NULL)
-		content = NULL;
-}
-*/
+
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*temp;
@@ -33,6 +27,11 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	*lst = NULL;
 }
 /*
+static void	del(void *content)
+{
+	if(content != NULL)
+		content = NULL;
+}
 int main()
 {
 	t_list *head;

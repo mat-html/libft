@@ -11,20 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_lstiter(t_list *lst, void (*f)(void *))
-{
-	t_list	*tmp;
-
-	if (!lst || !f)
-		return ;
-	tmp = lst;
-	while (tmp)
-	{
-		f(tmp->content);
-		tmp = tmp->next;
-	}
-}
 /*
 void    to_upper(void *content)
 {
@@ -40,7 +26,21 @@ void    to_upper(void *content)
         i++;
     }
 }
+*/
+void	ft_lstiter(t_list *lst, void (*f)(void *))
+{
+	t_list	*tmp;
 
+	if (!lst || !f)
+		return ;
+	tmp = lst;
+	while (tmp)
+	{
+		f(tmp->content);
+		tmp = tmp->next;
+	}
+}
+/*
 void	print_lst(t_list *lst)
 {
 	while (lst != NULL)
@@ -71,5 +71,5 @@ int main()
 	test4->next = NULL;
 
 	ft_lstiteri(test2, to_upper);
-	print_lst(test);
+_	print_lst(test);
 }*/

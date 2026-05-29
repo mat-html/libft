@@ -11,7 +11,22 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
+void	print_lst(t_list *lst)
+{
+	while (lst != NULL)
+	{
+			printf("%s\n", (char *)lst->content);
+		lst = lst->next;
+	}
+}
 
+void del(void *content)
+{
+	if (content)
+		free(content);
+}
+*/
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*temp;
@@ -37,21 +52,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	return (new_list);
 }
 /*
-void	print_lst(t_list *lst)
-{
-	while (lst != NULL)
-	{
-			printf("%s\n", (char *)lst->content);
-		lst = lst->next;
-	}
-}
-
-void del(void *content)
-{
-	if (content)
-		free(content);
-}
-
 int main()
 {
 	t_list *test;

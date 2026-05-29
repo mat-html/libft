@@ -104,7 +104,7 @@ Design notes and guarantees
 
 ### How AI was used
 
-An AI assistant was used to help with some development tasks in this
+An AI assistant was used to help with some small adjustments in this
 repository. Specifically:
 
 - Fixing compilation warnings and errors in implementation code (testing file main.c; iterative
@@ -119,5 +119,4 @@ the AI, I can provide a concise summary or a git diff on request.
 
 ## License / Attribution
 
-This project follows the requirements of the 42 curriculum. See individual
-source files for author headers and attribution.
+This project follows the requirements of the 42 curriculum.

@@ -43,17 +43,17 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 #include <stdio.h>
 int    main(void)
 {
-    char    real[100] = "ABCDEFGHIJ";
-    char    fake[100] = "ABCDEFGHIJ";
-   char    help[100] = "ABCDEFGHIJ";
+    //char    real[100] = "ABCDEFGHIJ";
+    //char    fake[100] = "ABCDEFGHIJ";
+  // char    help[100] = "ABCDEFGHIJ";
    char s0[] = { 0,  0,  0,  0,  0,  0, 0};
    char s[] = {65, 66, 67, 68, 69, 0, 45};
-    int len = 5;
+   // int len = 5;
 
-    printf("string: %s\n\n", s);
-    memmove(s0 , s, 7);
-    printf("memmove: %s\n", s0);
-   s = {65, 66, 67, 68, 69, 0, 45};
+  //  printf("string: %s\n\n", s);
+    //memmove(s0 , s, 7);
+    //printf("memmove: %s\n", s0);
+   //s = {65, 66, 67, 68, 69, 0, 45};
     
 	ft_memmove(s0, s, 7);
     printf("ft_memmove: %s\n", s0);
@@ -75,4 +75,16 @@ int    main(void)
 
 	ft_memcpy(Result_FK + 1, Result_FK, len);
 	printf("ft_memcpy: %s\n\n", Result_FK);
+}*/
+
+/*
+#include <stdio.h>
+int main()
+{
+	unsigned char dest[20];
+	const unsigned char *src = "somethingToBeMoved";
+	
+	ft_memmove(&src[2], src, sizeof(char) * 10);
+	printf("moved: %s", dest);
+	return (0);
 }*/
